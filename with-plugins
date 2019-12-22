@@ -1,0 +1,27 @@
+#!/bin/bash
+MINECRAFT_HOME=${MINECRAFT_HOME:-/opt/minecraft}
+PLUGINS_DIR=${MINECRAFT_HOME}/plugins
+
+LUCKPERMS_VERSION=5.0.36
+LUCKPERMS_JAR=LuckPerms-Bukkit-${LUCKPERMS_VERSION}.jar
+LUCKPERMS_URL=https://ci.lucko.me/job/LuckPerms/958/artifact/bukkit/build/libs/${LUCKPERMS_JAR}
+
+SETHOMES_VERSION=1.2.4
+SETHOMES_JAR=SetHomes-${SETHOMES_VERSION}.jar
+SETHOMES_URL=https://media.forgecdn.net/files/2837/366/${SETHOMES_JAR}
+
+SPITTOON_VERSION=1.0
+SPITTOON_JAR=spittoon-${SPITTOON_VERSION}.jar
+SPITTOON_URL=https://media.forgecdn.net/files/2846/681/${SPITTOON_JAR}
+
+if [ ! -f $PLUGINS_DIR/$SPITTOON_JAR ]; then
+    mkdir -p $PLUGINS_DIR
+    pushd $PLUGINS_DIR
+    curl -S $LUCKPERMS_URL -o $LUCKPERMS_JAR
+    curl -S $SETHOMES_URL -o $SETHOMES_JAR
+    curl -S $SPITTOON_URL -o $SPITTOON_JAR
+    popd
+    paper permissions
+fi
+
+exec "$@"
