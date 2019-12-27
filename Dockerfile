@@ -1,4 +1,4 @@
-FROM cpmcdaniel/papermc:release-1.1
+FROM cpmcdaniel/papermc:release-1.2
 
 LABEL maintainer="cpmcdaniel@gmail.com"
 
