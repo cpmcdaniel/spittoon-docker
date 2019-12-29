@@ -14,7 +14,7 @@ SPITTOON_VERSION=1.0
 SPITTOON_JAR=spittoon-${SPITTOON_VERSION}.jar
 SPITTOON_URL=https://media.forgecdn.net/files/2846/681/${SPITTOON_JAR}
 
-if [ ! -f $PLUGINS_DIR/$SPITTOON_JAR ]; then
+if [ ! -d $PLUGINS_DIR/Spittoon ]; then
     mkdir -p $PLUGINS_DIR
     pushd $PLUGINS_DIR
     curl -S $LUCKPERMS_URL -o $LUCKPERMS_JAR
