@@ -10,9 +10,9 @@ SETHOMES_VERSION=1.2.4
 SETHOMES_JAR=SetHomes-${SETHOMES_VERSION}.jar
 SETHOMES_URL=https://media.forgecdn.net/files/2837/366/${SETHOMES_JAR}
 
-SPITTOON_VERSION=1.0
+SPITTOON_VERSION=1.1
 SPITTOON_JAR=spittoon-${SPITTOON_VERSION}.jar
-SPITTOON_URL=https://media.forgecdn.net/files/2846/681/${SPITTOON_JAR}
+SPITTOON_URL=https://media.forgecdn.net/files/2872/811/${SPITTOON_JAR}
 
 if [ ! -d $PLUGINS_DIR/Spittoon ]; then
     mkdir -p $PLUGINS_DIR
