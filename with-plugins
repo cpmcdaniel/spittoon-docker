@@ -2,13 +2,13 @@
 MINECRAFT_HOME=${MINECRAFT_HOME:-/opt/minecraft}
 PLUGINS_DIR=${MINECRAFT_HOME}/plugins
 
-LUCKPERMS_VERSION=5.0.36
+LUCKPERMS_VERSION=5.0.70
 LUCKPERMS_JAR=LuckPerms-Bukkit-${LUCKPERMS_VERSION}.jar
-LUCKPERMS_URL=https://ci.lucko.me/job/LuckPerms/958/artifact/bukkit/build/libs/${LUCKPERMS_JAR}
+LUCKPERMS_URL=https://ci.lucko.me/job/LuckPerms/989/artifact/bukkit/build/libs/${LUCKPERMS_JAR}
 
-SETHOMES_VERSION=1.2.4
+SETHOMES_VERSION=1.2.5
 SETHOMES_JAR=SetHomes-${SETHOMES_VERSION}.jar
-SETHOMES_URL=https://media.forgecdn.net/files/2837/366/${SETHOMES_JAR}
+SETHOMES_URL=https://media.forgecdn.net/files/2869/602/${SETHOMES_JAR}
 
 SPITTOON_VERSION=1.1
 SPITTOON_JAR=spittoon-${SPITTOON_VERSION}.jar
