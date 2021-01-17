@@ -2,22 +2,26 @@
 MINECRAFT_HOME=${MINECRAFT_HOME:-/opt/minecraft}
 PLUGINS_DIR=${MINECRAFT_HOME}/plugins
 
-LUCKPERMS_VERSION=5.0.70
+LUCKPERMS_VERSION=5.1.107
 LUCKPERMS_JAR=LuckPerms-Bukkit-${LUCKPERMS_VERSION}.jar
-LUCKPERMS_URL=https://ci.lucko.me/job/LuckPerms/989/artifact/bukkit/build/libs/${LUCKPERMS_JAR}
+LUCKPERMS_URL=https://ci.lucko.me/job/LuckPerms/1164/artifact/bukkit/build/libs/${LUCKPERMS_JAR}
 
-SETHOMES_VERSION=1.2.5
+VAULT_JAR=Vault.jar
+VAULT_URL=https://media.forgecdn.net/files/3007/470/${VAULT_JAR}
+
+SETHOMES_VERSION=1.2.8
 SETHOMES_JAR=SetHomes-${SETHOMES_VERSION}.jar
-SETHOMES_URL=https://media.forgecdn.net/files/2869/602/${SETHOMES_JAR}
+SETHOMES_URL=https://media.forgecdn.net/files/3042/778/${SETHOMES_JAR}
 
-SPITTOON_VERSION=1.2
+SPITTOON_VERSION=1.3
 SPITTOON_JAR=spittoon-${SPITTOON_VERSION}.jar
-SPITTOON_URL=https://media.forgecdn.net/files/2876/164/${SPITTOON_JAR}
+SPITTOON_URL=https://media.forgecdn.net/files/2877/283/${SPITTOON_JAR}
 
 if [ ! -d $PLUGINS_DIR/Spittoon ]; then
     mkdir -p $PLUGINS_DIR
     pushd $PLUGINS_DIR
     curl -S $LUCKPERMS_URL -o $LUCKPERMS_JAR
+    curl -S $VAULT_URL -o $VAULT_JAR
     curl -S $SETHOMES_URL -o $SETHOMES_JAR
     curl -S $SPITTOON_URL -o $SPITTOON_JAR
     popd
